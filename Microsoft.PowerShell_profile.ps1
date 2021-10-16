@@ -13,7 +13,7 @@ mklink settings.json "D:\Git\WindowsTerminal\terminalsettings\settings.json"
 
 #>
 
-oh-my-posh --init --shell pwsh --config D:\git\themes\blueish.omp.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config "D:\Git\WindowsTerminal\themes\blue-owl.omp.json" | Invoke-Expression
  
 if ($host.Name -eq 'ConsoleHost')
 {
