@@ -10,6 +10,7 @@ winget install --id Git.Git
 
 
 mklink settings.json "D:\Git\WindowsTerminal\terminalsettings\settings.json"
+mklink Microsoft.PowerShell_profile.ps1 "D:\Git\WindowsTerminal\Microsoft.PowerShell_profile.ps1"
 
 #>
 
