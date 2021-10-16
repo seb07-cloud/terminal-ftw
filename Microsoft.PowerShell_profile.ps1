@@ -1,4 +1,16 @@
-#oh-my-posh --init --shell pwsh --config C:\Users\wilds\AppData\Local\Programs\oh-my-posh\themes\M365Princess.omp.json | Invoke-Expression
+
+<#ä
+
+Install-Module PSReadLine -AllowPrerelease -Force
+Install-Module Terminal-Icons
+winget install JanDeDobbeleer.OhMyPosh
+winget install --id Git.Git
+Install-Module z
+
+mklink settings.json "D:\Git\WindowsTerminal\terminalsettings\settings.json"
+
+#>
+
 oh-my-posh --init --shell pwsh --config C:\Users\wilds\AppData\Local\Programs\oh-my-posh\themes\blueish.omp.json | Invoke-Expression
  
 if ($host.Name -eq 'ConsoleHost')
