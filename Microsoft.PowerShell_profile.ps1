@@ -3,9 +3,11 @@
 
 Install-Module PSReadLine -AllowPrerelease -Force
 Install-Module Terminal-Icons
+Install-Module z
+
 winget install JanDeDobbeleer.OhMyPosh
 winget install --id Git.Git
-Install-Module z
+
 
 mklink settings.json "D:\Git\WindowsTerminal\terminalsettings\settings.json"
 
