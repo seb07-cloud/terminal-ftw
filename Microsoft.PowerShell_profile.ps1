@@ -4,10 +4,10 @@ if (!(Test-Path 'C:\Temp')){
     New-Item -Path 'C:\temp' -ItemType Directory
 }
 
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/apps.txt -OutFile C:\temp\apps.txt
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/apps-modules/apps.txt -OutFile C:\temp\apps.txt
 Get-Content C:\temp\apps.txt | foreach-object { Winget install $_ --silent}
 
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/modules.txt -Outfile C:\temp\modules.txt
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/apps-modules/modules.txt -Outfile C:\temp\modules.txt
 Get-Content C:\temp\modules.txt | foreach-object { install-module $_ -confirm:$false -AllowClobber}
 #>
 
