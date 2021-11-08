@@ -31,7 +31,7 @@ winget install -e --id Notion.Notion
 winget install -e --id Discord.Discord
 winget install -e --id RARLab.WinRAR
 winget install -e --id 7zip.7zip
-winget install -e --id TradingView.TradingViewDesktopBeta
+winget install -e --id TradingView.TradingViewDesktop
 
 mklink settings.json "D:\Git\WindowsTerminal\terminalsettings\settings.json"
 New-Item -Path $profile -ItemType SymbolicLink -Value (Get-Item "D:\Git\WindowsTerminal\Microsoft.PowerShell_profile.ps1").FullName
