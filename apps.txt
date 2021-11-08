@@ -28,3 +28,5 @@ Telegram.TelegramDesktop
 
 Get-Content .\apps.txt | foreach-object { Winget install $_ --silent}
 Winget upgrade --all --silent
+
+get-content https://github.com/seb07-cloud/WindowsTerminal/blob/bfc4dd777c4ed639a5cf0c99a47cf43fa265f183/apps.txt#L30

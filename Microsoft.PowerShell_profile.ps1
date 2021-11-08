@@ -8,7 +8,7 @@ if (!(Test-Path $profile)){
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/Microsoft.PowerShell_profile.ps1 -OutFile $profile
 
 if (!(Test-Path 'C:\Temp')){
-    New-Item -Path 'D:\temp' -ItemType Directory
+    New-Item -Path 'C:\temp' -ItemType Directory
 }
 
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/apps.txt -OutFile C:\temp\apps.txt

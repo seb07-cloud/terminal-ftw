@@ -1,0 +1,7 @@
+PSReadLine -AllowPrerelease -Force
+Terminal-Icons
+z
+IntuneBackupandRestore
+MSGraphFunctions
+AzureAD
+ExchangeOnlineManagement
