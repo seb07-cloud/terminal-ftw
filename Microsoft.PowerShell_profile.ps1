@@ -4,7 +4,6 @@
 if (!(Test-Path $profile)){
     New-Item C:\Users\$env:USERNAME\Documents\PowerShell -ItemType Folder
 }
-
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/Microsoft.PowerShell_profile.ps1 -OutFile $profile
 
 if (!(Test-Path 'C:\Temp')){
@@ -12,16 +11,11 @@ if (!(Test-Path 'C:\Temp')){
 }
 
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/apps.txt -OutFile C:\temp\apps.txt
-
 Get-Content C:\temp\apps.txt | foreach-object { Winget install $_ --silent}
 
-Install-Module PSReadLine -AllowPrerelease -Force
-Install-Module Terminal-Icons
-Install-Module z
-Install-Module IntuneBackupandRestore
-Install-Module MSGraphFunctions
-Install-Module AzureAD
-Install-Module ExchangeOnlineManagement
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/modules.txt -Outfile C:\temp\modules.txt
+Get-Content C:\temp\modules.txt | foreach-object { install-module $_ -confirm:$false -AllowClobber}
+
 
 mklink settings.json "D:\Git\WindowsTerminal\terminalsettings\settings.json"
 New-Item -Path $profile -ItemType SymbolicLink -Value (Get-Item "D:\Git\WindowsTerminal\Microsoft.PowerShell_profile.ps1").FullName
