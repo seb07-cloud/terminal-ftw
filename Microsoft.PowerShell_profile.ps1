@@ -25,6 +25,13 @@ winget install Microsoft.VisualStudioCode
 winget install Notepad++.Notepad++
 winget install -e --id Philips.HueSync
 winget install -e --id Mozilla.Firefox
+winget install -e --id Google.Chrome
+winget install -e --id Microsoft.Bicep
+winget install -e --id Notion.Notion
+winget install -e --id Discord.Discord
+winget install -e --id RARLab.WinRAR
+winget install -e --id 7zip.7zip
+winget install -e --id TradingView.TradingViewDesktopBeta
 
 mklink settings.json "D:\Git\WindowsTerminal\terminalsettings\settings.json"
 New-Item -Path $profile -ItemType SymbolicLink -Value (Get-Item "D:\Git\WindowsTerminal\Microsoft.PowerShell_profile.ps1").FullName
