@@ -23,6 +23,8 @@ Sonos.Controller
 Foxit.FoxitReader
 Canonical.Ubuntu.1804
 Microsoft.OneDrive
+WhatsApp.WhatsApp
+Telegram.TelegramDesktop
 
 Get-Content .\apps.txt | foreach-object { Winget install $_ --silent}
 Winget upgrade --all --silent
