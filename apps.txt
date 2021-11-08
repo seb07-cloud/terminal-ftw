@@ -20,6 +20,9 @@ RARLab.WinRAR
 7zip.7zip
 TradingView.TradingViewDesktop
 Sonos.Controller
+Foxit.FoxitReader
+Canonical.Ubuntu.1804
+Microsoft.OneDrive
 
 Get-Content .\apps.txt | foreach-object { Winget install $_ --silent}
 Winget upgrade --all --silent

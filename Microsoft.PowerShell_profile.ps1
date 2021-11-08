@@ -9,31 +9,6 @@ Install-Module MSGraphFunctions
 Install-Module AzureAD
 Install-Module ExchangeOnlineManagement
 
-
-
-winget install -e --id JanDeDobbeleer.OhMyPosh
-winget install -e --id Git.Git
-winget install -e --id Spotify.Spotify
-winget install -e --id GitHub.GitHubDesktop
-winget install -e --id Citrix.Workspace
-winget install -e --id Microsoft.WindowsTerminal.Preview
-winget install -e --id Microsoft.PowerToys
-winget install -e --id Microsoft.PowerAutomateDesktop
-winget install -e --id Microsoft.Office
-winget install -e --id Microsoft.WindowsTerminal
-winget install -e --id Microsoft.VisualStudioCode
-winget install -e --id Notepad++.Notepad++
-winget install -e --id Philips.HueSync
-winget install -e --id Mozilla.Firefox
-winget install -e --id Google.Chrome
-winget install -e --id Microsoft.Bicep
-winget install -e --id Notion.Notion
-winget install -e --id Discord.Discord
-winget install -e --id RARLab.WinRAR
-winget install -e --id 7zip.7zip
-winget install -e --id TradingView.TradingViewDesktop
-winget install -e --id Sonos.Controller
-
 mklink settings.json "D:\Git\WindowsTerminal\terminalsettings\settings.json"
 New-Item -Path $profile -ItemType SymbolicLink -Value (Get-Item "D:\Git\WindowsTerminal\Microsoft.PowerShell_profile.ps1").FullName
 New-Item -Path $profile -ItemType SymbolicLink -Value (Get-Item "D:\Git\WindowsTerminal\Microsoft.PowerShell_profile.ps1").FullName
