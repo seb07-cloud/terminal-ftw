@@ -1,6 +1,20 @@
 
 <#
 
+if (!(Test-Path $profile)){
+    New-Item C:\Users\$env:USERNAME\Documents\PowerShell -ItemType Folder
+}
+
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/Microsoft.PowerShell_profile.ps1 -OutFile $profile
+
+if (!(Test-Path 'C:\Temp')){
+    New-Item -Path 'D:\temp' -ItemType Directory
+}
+
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/apps.txt -OutFile C:\temp\apps.txt
+
+Get-Content C:\temp\apps.txt | foreach-object { Winget install $_ --silent}
+
 Install-Module PSReadLine -AllowPrerelease -Force
 Install-Module Terminal-Icons
 Install-Module z
