@@ -4,10 +4,27 @@
 Install-Module PSReadLine -AllowPrerelease -Force
 Install-Module Terminal-Icons
 Install-Module z
+Install-Module IntuneBackupandRestore
+Install-Module MSGraphFunctions
+Install-Module AzureAD
+Install-Module ExchangeOnlineManagement
+
+
 
 winget install JanDeDobbeleer.OhMyPosh
 winget install --id Git.Git
-
+winget install Spotify.Spotify
+winget install GitHub.GitHubDesktop
+winget install Citrix.Workspace
+winget install Microsoft.WindowsTerminal.Preview
+winget install Microsoft.PowerToys
+winget install Microsoft.PowerAutomateDesktop
+winget install Microsoft.Office
+winget install Microsoft.WindowsTerminal
+winget install Microsoft.VisualStudioCode
+winget install Notepad++.Notepad++
+winget install -e --id Philips.HueSync
+winget install -e --id Mozilla.Firefox
 
 mklink settings.json "D:\Git\WindowsTerminal\terminalsettings\settings.json"
 New-Item -Path $profile -ItemType SymbolicLink -Value (Get-Item "D:\Git\WindowsTerminal\Microsoft.PowerShell_profile.ps1").FullName
