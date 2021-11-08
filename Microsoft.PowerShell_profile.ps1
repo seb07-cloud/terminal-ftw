@@ -31,10 +31,12 @@ if ($host.Name -eq 'ConsoleHost')
     Import-Module PSReadLine
 }
 
-Import-Module -Name Terminal-Icons
+Import-Module Terminal-Icons
 Import-Module z
 Import-Module IntuneBackupandRestore
 Import-Module MSGraphFunctions
+Import-Module AzureAD
+Import-Module ExchangeOnlineManagement
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param($wordToComplete, $commandAst, $cursorPosition)
