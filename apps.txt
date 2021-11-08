@@ -25,6 +25,7 @@ Canonical.Ubuntu.1804
 Microsoft.OneDrive
 WhatsApp.WhatsApp
 Telegram.TelegramDesktop
+Corsair.iCUE.4
 
 Get-Content .\apps.txt | foreach-object { Winget install $_ --silent}
 Winget upgrade --all --silent

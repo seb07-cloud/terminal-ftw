@@ -1,11 +1,5 @@
 
 <#
-
-if (!(Test-Path $profile)){
-    New-Item C:\Users\$env:USERNAME\Documents\PowerShell -ItemType Folder
-}
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/Microsoft.PowerShell_profile.ps1 -OutFile $profile
-
 if (!(Test-Path 'C:\Temp')){
     New-Item -Path 'C:\temp' -ItemType Directory
 }
@@ -15,14 +9,13 @@ Get-Content C:\temp\apps.txt | foreach-object { Winget install $_ --silent}
 
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/modules.txt -Outfile C:\temp\modules.txt
 Get-Content C:\temp\modules.txt | foreach-object { install-module $_ -confirm:$false -AllowClobber}
-
-
-mklink settings.json "D:\Git\WindowsTerminal\terminalsettings\settings.json"
-New-Item -Path $profile -ItemType SymbolicLink -Value (Get-Item "D:\Git\WindowsTerminal\Microsoft.PowerShell_profile.ps1").FullName
-New-Item -Path $profile -ItemType SymbolicLink -Value (Get-Item "D:\Git\WindowsTerminal\Microsoft.PowerShell_profile.ps1").FullName
-
-
 #>
+
+if (!(Test-Path $profile)){
+    New-Item C:\Users\$env:USERNAME\Documents\PowerShell -ItemType Folder
+    Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/Microsoft.PowerShell_profile.ps1 -OutFile $profile
+}
+
 
 oh-my-posh --init --shell pwsh --config "D:\Git\WindowsTerminal\themes\blue-owl.omp.json" | Invoke-Expression
  
