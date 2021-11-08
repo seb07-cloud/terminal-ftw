@@ -1,0 +1,25 @@
+JanDeDobbeleer.OhMyPosh
+Git.Git
+Spotify.Spotify
+GitHub.GitHubDesktop
+Citrix.Workspace
+Microsoft.WindowsTerminal.Preview
+Microsoft.PowerToys
+Microsoft.PowerAutomateDesktop
+Microsoft.Office
+Microsoft.WindowsTerminal
+Microsoft.VisualStudioCode
+Notepad++.Notepad++
+Philips.HueSync
+Mozilla.Firefox
+Google.Chrome
+Microsoft.Bicep
+Notion.Notion
+Discord.Discord
+RARLab.WinRAR
+7zip.7zip
+TradingView.TradingViewDesktop
+Sonos.Controller
+
+Get-Content .\apps.txt | foreach-object { Winget install $_ --silent}
+Winget upgrade --all --silent
