@@ -11,18 +11,18 @@ Install-Module ExchangeOnlineManagement
 
 
 
-winget install JanDeDobbeleer.OhMyPosh
-winget install --id Git.Git
-winget install Spotify.Spotify
-winget install GitHub.GitHubDesktop
-winget install Citrix.Workspace
-winget install Microsoft.WindowsTerminal.Preview
-winget install Microsoft.PowerToys
-winget install Microsoft.PowerAutomateDesktop
-winget install Microsoft.Office
-winget install Microsoft.WindowsTerminal
-winget install Microsoft.VisualStudioCode
-winget install Notepad++.Notepad++
+winget install -e --id JanDeDobbeleer.OhMyPosh
+winget install -e --id Git.Git
+winget install -e --id Spotify.Spotify
+winget install -e --id GitHub.GitHubDesktop
+winget install -e --id Citrix.Workspace
+winget install -e --id Microsoft.WindowsTerminal.Preview
+winget install -e --id Microsoft.PowerToys
+winget install -e --id Microsoft.PowerAutomateDesktop
+winget install -e --id Microsoft.Office
+winget install -e --id Microsoft.WindowsTerminal
+winget install -e --id Microsoft.VisualStudioCode
+winget install -e --id Notepad++.Notepad++
 winget install -e --id Philips.HueSync
 winget install -e --id Mozilla.Firefox
 winget install -e --id Google.Chrome
