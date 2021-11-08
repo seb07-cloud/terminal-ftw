@@ -25,6 +25,8 @@ if ($host.Name -eq 'ConsoleHost')
 
 Import-Module -Name Terminal-Icons
 Import-Module z
+Import-Module IntuneBackupandRestore
+Import-Module MSGraphFunctions
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param($wordToComplete, $commandAst, $cursorPosition)
