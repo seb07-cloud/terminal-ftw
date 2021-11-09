@@ -3,5 +3,5 @@ Terminal-Icons
 z
 IntuneBackupandRestore
 MSGraphFunctions
-AzureAD
+AzureADPreview
 ExchangeOnlineManagement
