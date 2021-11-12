@@ -722,7 +722,7 @@ function Connect-Msol {
         Import-Module MSOnline
         Connect-MsolService -Credential $cred
         $s = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell -Credential $cred -Authentication Basic -AllowRedirection
-        $importresults = Import-PSSession $s
+        Import-PSSession $s
     }
     end {}
 }
