@@ -22,10 +22,3 @@ Note: the last command `. $dest` may induce an error that has to do with "Execut
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 . $dest
 ```
-
-### Option 2: Clone/download repository to local machine
-Or, fork, clone or download this repository if you want more tweaking and customization.
-When on a local machine, copy all `.ps1` files to your PowerShell profile directory. For example:
-```powershell
-Copy-Item .\*.ps1 (Split-Path $PROFILE.CurrentUserAllHosts)
-```
