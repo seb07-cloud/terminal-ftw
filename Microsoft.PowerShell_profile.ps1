@@ -4,10 +4,10 @@ if (!(Test-Path 'C:\Temp')){
     New-Item -Path 'C:\temp' -ItemType Directory
 }
 
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/apps-modules/apps.txt -OutFile C:\temp\apps.txt
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/apps.txt -OutFile C:\temp\apps.txt
 Get-Content C:\temp\apps.txt | foreach-object { Winget install $_ --silent}
 
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/apps-modules/modules.txt -Outfile C:\temp\modules.txt
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/seb07-cloud/WindowsTerminal/main/modules.txt -Outfile C:\temp\modules.txt
 Get-Content C:\temp\modules.txt | foreach-object { install-module $_ -confirm:$false -AllowClobber}
 #>
 
@@ -28,7 +28,7 @@ Import-Module Terminal-Icons
 Import-Module z
 Import-Module IntuneBackupandRestore
 Import-Module MSGraphFunctions
-Import-Module AzureAD
+Import-Module AzureADPreview
 Import-Module ExchangeOnlineManagement
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
@@ -572,7 +572,7 @@ Set-PSReadLineKeyHandler -Key Ctrl+j `
     $dir = $global:PSReadLineMarks[$key.KeyChar]
     if ($dir)
     {
-        cd $dir
+        set-locat $dir
         [Microsoft.PowerShell.PSConsoleReadLine]::InvokePrompt()
     }
 }
@@ -583,7 +583,7 @@ Set-PSReadLineKeyHandler -Key Alt+j `
                          -ScriptBlock {
     param($key, $arg)
 
-    $global:PSReadLineMarks.GetEnumerator() | % {
+    $global:PSReadLineMarks.GetEnumerator() | ForEach-Object {
         [PSCustomObject]@{Key = $_.Key; Dir = $_.Value} } |
         Format-Table -AutoSize | Out-Host
 
