@@ -4,7 +4,7 @@
 
 ## How To Use
 
-### Option 1: Download the profile scripts directly to your local PowerShell profile location
+### Download the profile scripts directly to your local PowerShell profile location
 You can download my PowerShell-Profile scripts directly to your local machine's PowerShell profile location. 
 Run the following script In a PowerShell console:
 ```powershell
