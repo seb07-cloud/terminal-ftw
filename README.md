@@ -1,6 +1,6 @@
-<h1 align="center">Powershell FTW 👋</h1>
+<h1 align="center">Powershell FTW</h1>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=seb07-cloud&label=Profile%20views&color=0e75b6&style=flat" alt="seb07-cloud" /> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=seb07-cloud&label=Profile%20views&color=0e75b6&style=flat" alt="seb07-cloud" /> </p>
 
 ## How To Use
 
