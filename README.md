@@ -2,7 +2,7 @@
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=seb07-cloud&label=Profile%20views&color=0e75b6&style=flat" alt="seb07-cloud" /> </p>
 
-## How To Use
+## How To Use the Profile
 
 ### Download the profile scripts directly to your local PowerShell profile location
 You can download my PowerShell-Profile scripts directly to your local machine's PowerShell profile location. 
