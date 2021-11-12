@@ -2,10 +2,6 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=seb07-cloud&label=Profile%20views&color=0e75b6&style=flat" alt="seb07-cloud" /> </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://docs.microsoft.com/en-us/powershell/" target="_blank"> <img src="https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true" alt="c" width="40" height="40"/> </a> </p>
-
-
 ## How To Use
 
 ### Option 1: Download the profile scripts directly to your local PowerShell profile location
