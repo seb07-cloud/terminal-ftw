@@ -709,4 +709,30 @@ Set-PSReadLineKeyHandler -Key Ctrl+Shift+t `
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert("dotnet test")
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
+
+# Custom functions
+
+function Connect-Msol {
+    [CmdletBinding()]
+    param ()
+    begin {}
+    
+    process {
+        $cred = Get-Credential
+        Import-Module MSOnline
+        Connect-MsolService -Credential $cred
+        $s = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell -Credential $cred -Authentication Basic -AllowRedirection
+        $importresults = Import-PSSession $s
+    }
+    end {}
+}
+
+
+# Set Aliases
+
+Set-Alias cex Connect-ExchangeOnline
+Set-Alias cms Connect-Msol
+Set-Alias l Get-ChildItem
+
+
 Clear-Host 
