@@ -732,6 +732,7 @@ function Connect-Msol {
 
 Set-Alias cex Connect-ExchangeOnline
 Set-Alias cms Connect-Msol
+Set-Alias caz Connect-AzureAD
 Set-Alias l Get-ChildItem
 
 
