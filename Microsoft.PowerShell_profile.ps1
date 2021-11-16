@@ -737,3 +737,10 @@ Set-Alias l Get-ChildItem
 
 
 Clear-Host 
+
+Write-Host "You can use a few Aliases : "
+Write-Host ""
+Write-Host "    cex = Connect-ExchangeOnline" -ForegroundColor Green
+Write-Host "    cms = Connect-Msol" -ForegroundColor Green
+Write-Host "    caz = Connect-AzureAD" -ForegroundColor Green
+Write-Host ""
