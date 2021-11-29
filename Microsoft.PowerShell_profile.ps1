@@ -30,6 +30,7 @@ Import-Module IntuneBackupandRestore
 Import-Module MSGraphFunctions
 Import-Module AzureADPreview
 Import-Module ExchangeOnlineManagement
+Import-Module PSWriteColor
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param($wordToComplete, $commandAst, $cursorPosition)
