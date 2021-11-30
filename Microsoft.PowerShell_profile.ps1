@@ -30,7 +30,6 @@ Import-Module IntuneBackupandRestore
 Import-Module MSGraphFunctions
 Import-Module AzureADPreview
 Import-Module ExchangeOnlineManagement
-Import-Module PSWriteColor
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param($wordToComplete, $commandAst, $cursorPosition)
@@ -728,12 +727,23 @@ function Connect-Msol {
     end {}
 }
 
+# Set Variables
+
+$PSSites = 'https://docs.microsoft.com/en-us/powershell/scripting/overview'
+$PSSites = $PSSites | Add-Member -NotePropertyName 'GitHub' -NotePropertyValue 'https://github.com/PowerShell/PowerShell' -PassThru
+$PSSites = $PSSites | Add-Member -NotePropertyName 'Docs' -NotePropertyValue 'https://docs.microsoft.com/en-us/powershell/' -PassThru
+$PSSites = $PSSites | Add-Member -NotePropertyName 'Gallery' -NotePropertyValue 'https://www.powershellgallery.com/' -PassThru
+$PSSites = $PSSites | Add-Member -NotePropertyMembers @{Reddit='https://www.reddit.com/r/PowerShell/'} -PassThru
+
+# $PSSites | Select-Object -Property *
+# $PSSites | Get-Member -MemberType NoteProperty
 
 # Set Aliases
 
 Set-Alias cex Connect-ExchangeOnline
 Set-Alias cms Connect-Msol
 Set-Alias caz Connect-AzureAD
+Set-Alias ct Connect-MicrosoftTeams
 Set-Alias l Get-ChildItem
 
 
@@ -741,7 +751,8 @@ Clear-Host
 
 Write-Host "You can use a few Aliases : "
 Write-Host ""
-Write-Host "    cex = Connect-ExchangeOnline" -ForegroundColor Green
-Write-Host "    cms = Connect-Msol" -ForegroundColor Green
-Write-Host "    caz = Connect-AzureAD" -ForegroundColor Green
+Write-Host "    cex =   Connect-ExchangeOnline" -ForegroundColor Green
+Write-Host "    cms =   Connect-Msol" -ForegroundColor Green
+Write-Host "    caz =   Connect-AzureAD" -ForegroundColor Green
+Write-Host "    ct  =   Connect-MicrosoftTeams" -ForegroundColor Green
 Write-Host ""
