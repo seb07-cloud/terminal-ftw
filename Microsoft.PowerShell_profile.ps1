@@ -756,3 +756,6 @@ Write-Host "    cms =   Connect-Msol" -ForegroundColor Green
 Write-Host "    caz =   Connect-AzureAD" -ForegroundColor Green
 Write-Host "    ct  =   Connect-MicrosoftTeams" -ForegroundColor Green
 Write-Host ""
+
+Write-Host "Or have a look at " -ForegroundColor Green
+$PSSites | Select-Object -Property *
