@@ -28,6 +28,7 @@ Telegram.TelegramDesktop
 Corsair.iCUE.4
 Elgato.StreamDeck
 7zip.7zip
+ElectronicArts.EADesktop
 
 Get-Content .\apps.txt | foreach-object { Winget install $_ --silent}
 Winget upgrade --all --silent
