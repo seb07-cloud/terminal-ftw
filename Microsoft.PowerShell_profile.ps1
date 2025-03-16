@@ -1,4 +1,5 @@
 # ln -s /mnt/c/Users/sebo/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 ~/.config/powershell/Microsoft.PowerShell_profile.ps1
+# New-Item -ItemType SymbolicLink -Path "C:\Users\sebo\Documents\PowerShell\Microsoft.VSCode_profile.ps1" -Target "C:\Users\sebo\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 
 if ($env:WSL_DISTRO_NAME) {
   # Unix-Pfad für WSL
